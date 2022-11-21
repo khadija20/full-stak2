@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<h1>facture</h1>
+		
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>numero</th>
+					<th>statudupayement</th>
+					<th>produit</th>
+					<th>pu</th>
+					<th>PHT</th>
+					<th>totalHT</th>
+					<th>TVA</th>
+					<th>TTC</th>
+					<th>quantite</th>
+					
+					
+				
+				</tr>
+			</thead>
+			<tbody>
+		
+				{% for item in factures %} 
+					
+					<tr>
+						<td>{{item.numero}}</td>
+						<td>{{item.statudupayement}}</td>
+						<td>{{item.produit}}</td> 
+				    		<td>{{item.pu}}</td> 
+								<td>{{item.PHT}}</td> 
+									<td>{{item.totalHT}}</td> 
+										<td>{{item.TVA}}</td> 
+											<td>{{item.TTC}}</td> 
+												<td>{{item.quantite}}</td> 
+						
+					
+					
+					</tr>
+			{% endfor %}
+
+	
+		
+					
+
+				
+			</tbody>
+		</table>
+		<h1>les clients</h1>
+
+<table class="table table-striped">
+			<thead>
+				<tr>
+				
+					
+					 <th>nom</th> <th>prenom</th>
+					 <th>typeclient</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+			{% for elem in  clients %}
+			
+					
+					<tr>
+						
+				    	<td>{{elem.nom}}</td>
+						<td>{{elem.prenom}}</td>
+						
+					<td>{{elem.typeclient}}</td>
+					
+					</tr>
+			{% endfor %}
+		
+	
+		
+					
+
+				
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+
+	
+  <button onclick="print();">Imprimer</button>
+
+
+
+
+
+{% endblock %}

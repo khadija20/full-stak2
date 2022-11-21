@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}magasin electronique
+			{% endblock %}
+		</title>
+		<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+		<link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand   " href="{{path('home')}}">magasin electronique</a>
+					<button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('client')}}">client</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('facture')}}">facture</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('admin')}}">administration</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_login')}}">app_login</a>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_logout')}}">app_logout</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+
+		</header>
+		{% block body %}{% endblock %}
+
+
+		<script src="{{ asset('/js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}accueil
+{% endblock %}
+
+{% block body %}
+	
+	
+	  
+	  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">lbele</th>
+      <th scope="col">categorie</th>
+      <th scope="col">description</th>
+      <th scope="col">prixachat</th>
+	   <th scope="col">quantite</th>
+	   
+      <th scope="col">prixvente</th>
+      <th scope="col">TVA</th>
+       <th scope="col">produitachte</th>
+        <th scope="col">produitvente</th>
+         <th scope="col">image</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in produits %}
+    <tr>
+      <th scope="row">{{item.lbele}}</th>
+      <td>{{item.categorie}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.prixachat}}</td>
+	  <td>{{item.quantite}}</td>
+      <td>{{item.prixvente}}</td>
+        <td>{{item.TVA}}</td>
+          <td>{{item.produitachte}}</td>
+            <td>{{item.produitvente}}</td>
+	  <td><figure class="figure">
+  <img src="uploads/images/products/{{item.image}}"  style="width: 150px; height: 100px; class="figure-img img-fluid rounded" >
+
+</figure></td>
+    </tr>
+  {% endfor %}
+  
+  </tbody>
+</table>
+
+{% endblock %}
+

@@ -1,0 +1,20 @@
+.nav-link{
+    color: rgb(221, 95, 45) !important;
+
+}
+.nav-link:hover{
+    color: rgb(209, 151, 187) !important;
+
+}
+
+.navbar-brand{
+    color: rgb(212, 95, 48) !important;
+}
+.navbar-brand:hover{
+    color: rgb(221, 229, 247) !important;
+}
+.navbar{
+    padding: 20px;
+}
+
+

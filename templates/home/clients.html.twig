@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+ 
+{% block body %}
+		
+	<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">adresse</th>
+      <th scope="col">telephone</th>
+      <th scope="col">typeclient</th>
+      <th scope="col">numerotva</th>
+      <th scope="col">ICE</th>
+      <th scope="col">responsbale</th>
+      <th scope="col">rib</th>
+          <th scope="col">banque</th>
+              <th scope="col">ville</th>
+               <th scope="col">email</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+   {% for item in clients %}
+    <tr>
+      
+      <td>{{item.nom}}</td>
+      <td>{{item.prenom}}</td>
+      <td>{{item.adresse}}</td>
+      <td>{{item.telephone}}</td>
+      <td>{{item.typeclient}}</td>
+      <td>{{item.numerotva}}</td>
+      <td>{{item.ICE}}</td>
+      <td>{{item.responsbale}}</td>
+      <td>{{item.rib}}</td>
+      <td>{{item.banque}}</td>
+      <td>{{item.ville}}</td>
+      <td>{{item.email}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+	
+	
+{% endblock %}
